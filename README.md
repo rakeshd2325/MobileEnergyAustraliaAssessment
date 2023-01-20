@@ -14,7 +14,7 @@
 - Tests executed on android emulator and ios simulator.
 
 ## Reports
-- Tests ran successfully. Please find reports in reports folder. For fails there is a screenshot attached and end of each test the screenshot attached.
+- Tests ran successfully. Please find reports in reports folder. For fails there is a screenshot attached and also for end of each test screenshot attached.
 
 
 ## Any Questions?
