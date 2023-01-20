@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "./.tsbuild/",
+        "sourceMap": false,
+        "target": "ES2020",
+        "module": "CommonJS",
+        "removeComments": true,
+        "noImplicitAny": true,
+        "strictPropertyInitialization": true,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "types": [
+            "node", 
+            "webdriverio/async",
+            "expect-webdriverio"
+        ]
+    },
+    "include": [
+        "./**/*.ts"
+    ]
+  }
+  
