@@ -8,7 +8,7 @@ config.capabilities = [
     'appium:platformVersion':"16.0",
     'appium:orientation': "PORTRAIT",
     'appium:automationName': 'XCUITest',
-    'appium:app': join(process.cwd(), "./apps/ios.app"),
+    'appium:app': join(process.cwd(), "./apps/EngergyAustraliaIOSApp.zip"),
     'appium:newCommandTimeout': 320,
     'appium:wdaStartupRetries': 4,
     'appium:isHeadless': true
