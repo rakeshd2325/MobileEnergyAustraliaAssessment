@@ -17,7 +17,7 @@ pool:
   name: RakeshMacbook
 
 variables:
-- group: Reporting
+#- group: Reporting
 - name: NODE_VERSION
   value: 19.6.0
 
