@@ -55,6 +55,11 @@ stages:
               script: npm install
               workingDirectory: '$(Build.SourcesDirectory)'
           - task: Bash@3
+            displayName: Start Appium
+            inputs:
+              targetType: 'inline'
+              script: 'appium --allow-insecure chromedriver_autodownload --base-path /wd/hub'
+          - task: Bash@3
             displayName: run ios specific tests
             inputs:
               targetType: 'inline'
