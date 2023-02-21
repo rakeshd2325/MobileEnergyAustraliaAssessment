@@ -22,6 +22,8 @@ variables:
 #- group: Reporting
 - name: NODE_VERSION
   value: 19.6.0
+- name: queuetimeTags
+  value: $(Tags)
 
 stages:
   - stage: mobileApp_test
@@ -56,6 +58,14 @@ stages:
               targetType: 'inline'
               script: npm install
               workingDirectory: '$(Build.SourcesDirectory)'
+          - task: Bash@3
+            displayName: run specific tag tests
+            condition: contains(variables['queuetimeTags'],'@')
+            inputs:
+              targetType: 'inline'
+              script: '/node_modules/.bin/wdio/.profiles/wdio.ios.local.conf.ts --cucumberOpts.tagExpression=$(Tags)'
+              workingDirectory: '$(Build.SourcesDirectory)'
+            continueOnError: true
           - task: Bash@3
             displayName: run ios specific tests
             inputs:
